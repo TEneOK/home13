@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String nameBook;
     private Author author;
@@ -16,7 +18,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameBook);
+        return Objects.hash(nameBook, author, yearOfIssue);
     }
 
     @Override
@@ -24,8 +26,10 @@ public class Book {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Book ThereIsNoSimilarityName = (Book) other;
-        return nameBook.equals(ThereIsNoSimilarityName.nameBook);
+        Book ThereIsNoSimilarityBook = (Book) other;
+        return Objects.equals(nameBook, ThereIsNoSimilarityBook.nameBook) &&
+                Objects.equals(author, ThereIsNoSimilarityBook.author) &&
+                Objects.equals(yearOfIssue, ThereIsNoSimilarityBook.yearOfIssue);
     }
 
     public String getNameBook() {

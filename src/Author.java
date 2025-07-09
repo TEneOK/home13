@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Author {
     private String authorName;
     private String authorSurname;
@@ -14,7 +16,7 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(authorSurname);
+        return Objects.hash(authorName, authorSurname);
     }
 
     @Override
@@ -22,8 +24,9 @@ public class Author {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Author ThereIsNoSimilaritySurname = (Author) other;
-        return authorSurname.equals(ThereIsNoSimilaritySurname.authorSurname);
+        Author ThereIsNoSimilarityFullName = (Author) other;
+        return Objects.equals(authorName, ThereIsNoSimilarityFullName.authorName) &&
+                Objects.equals(authorSurname, ThereIsNoSimilarityFullName.authorSurname);
     }
 
     public String getAuthorName() {
@@ -33,5 +36,4 @@ public class Author {
     public String getAuthorSurname() {
         return this.authorSurname;
     }
-
 }
