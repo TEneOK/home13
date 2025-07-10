@@ -26,10 +26,10 @@ public class Book {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Book ThereIsNoSimilarityBook = (Book) other;
-        return Objects.equals(nameBook, ThereIsNoSimilarityBook.nameBook) &&
-                Objects.equals(author, ThereIsNoSimilarityBook.author) &&
-                Objects.equals(yearOfIssue, ThereIsNoSimilarityBook.yearOfIssue);
+        Book thereIsNoSimilarityBook = (Book) other;
+        return Objects.equals(nameBook, thereIsNoSimilarityBook.nameBook) &&
+                Objects.equals(author, thereIsNoSimilarityBook.author) &&
+                Objects.equals(yearOfIssue, thereIsNoSimilarityBook.yearOfIssue);
     }
 
     public String getNameBook() {

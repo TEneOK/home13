@@ -24,9 +24,9 @@ public class Author {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Author ThereIsNoSimilarityFullName = (Author) other;
-        return Objects.equals(authorName, ThereIsNoSimilarityFullName.authorName) &&
-                Objects.equals(authorSurname, ThereIsNoSimilarityFullName.authorSurname);
+        Author thereIsNoSimilarityFullName = (Author) other;
+        return Objects.equals(authorName, thereIsNoSimilarityFullName.authorName) &&
+                Objects.equals(authorSurname, thereIsNoSimilarityFullName.authorSurname);
     }
 
     public String getAuthorName() {

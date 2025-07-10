@@ -13,7 +13,5 @@ public class App {
         System.out.println("Первая книга = " + oneBook);
         System.out.println("Вторая книга = " + twoBook);
     }
-
-
 }
 
